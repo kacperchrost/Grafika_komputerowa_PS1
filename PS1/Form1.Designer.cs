@@ -92,13 +92,11 @@
             this.shapesControl.Location = new System.Drawing.Point(12, 12);
             this.shapesControl.Name = "shapesControl";
             this.shapesControl.SelectedIndex = 0;
-            this.shapesControl.Size = new System.Drawing.Size(690, 123);
+            this.shapesControl.Size = new System.Drawing.Size(690, 101);
             this.shapesControl.TabIndex = 1;
             // 
             // lines
             // 
-            this.lines.Controls.Add(this.clearButton);
-            this.lines.Controls.Add(this.changeButton);
             this.lines.Controls.Add(this.drawLineButton);
             this.lines.Controls.Add(this.label4);
             this.lines.Controls.Add(this.label3);
@@ -113,25 +111,26 @@
             this.lines.Location = new System.Drawing.Point(4, 24);
             this.lines.Name = "lines";
             this.lines.Padding = new System.Windows.Forms.Padding(3);
-            this.lines.Size = new System.Drawing.Size(682, 95);
+            this.lines.Size = new System.Drawing.Size(682, 73);
             this.lines.TabIndex = 0;
             this.lines.Text = "Lines";
             this.lines.UseVisualStyleBackColor = true;
             // 
             // drawLineButton
             // 
-            this.drawLineButton.Location = new System.Drawing.Point(601, 66);
+            this.drawLineButton.Location = new System.Drawing.Point(604, 36);
             this.drawLineButton.Name = "drawLineButton";
             this.drawLineButton.Size = new System.Drawing.Size(75, 23);
             this.drawLineButton.TabIndex = 8;
             this.drawLineButton.Text = "Draw";
             this.drawLineButton.UseVisualStyleBackColor = true;
+            this.drawLineButton.Click += new System.EventHandler(this.drawLineButton_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(28, 39);
+            this.label4.Location = new System.Drawing.Point(13, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 19);
             this.label4.TabIndex = 7;
@@ -141,7 +140,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(465, 40);
+            this.label3.Location = new System.Drawing.Point(450, 39);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 19);
             this.label3.TabIndex = 6;
@@ -151,7 +150,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(150, 39);
+            this.label2.Location = new System.Drawing.Point(135, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 19);
             this.label2.TabIndex = 5;
@@ -161,7 +160,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(343, 42);
+            this.label1.Location = new System.Drawing.Point(328, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(17, 19);
             this.label1.TabIndex = 1;
@@ -169,7 +168,7 @@
             // 
             // linesYEnd
             // 
-            this.linesYEnd.Location = new System.Drawing.Point(485, 37);
+            this.linesYEnd.Location = new System.Drawing.Point(470, 36);
             this.linesYEnd.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -186,7 +185,7 @@
             // 
             // linesXEnd
             // 
-            this.linesXEnd.Location = new System.Drawing.Point(363, 37);
+            this.linesXEnd.Location = new System.Drawing.Point(348, 36);
             this.linesXEnd.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -203,7 +202,7 @@
             // 
             // linesYStart
             // 
-            this.linesYStart.Location = new System.Drawing.Point(170, 36);
+            this.linesYStart.Location = new System.Drawing.Point(155, 35);
             this.linesYStart.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -220,7 +219,7 @@
             // 
             // linesXStart
             // 
-            this.linesXStart.Location = new System.Drawing.Point(48, 36);
+            this.linesXStart.Location = new System.Drawing.Point(33, 35);
             this.linesXStart.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -239,7 +238,7 @@
             // 
             this.lines_EndPoint.AutoSize = true;
             this.lines_EndPoint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lines_EndPoint.Location = new System.Drawing.Point(343, 14);
+            this.lines_EndPoint.Location = new System.Drawing.Point(328, 13);
             this.lines_EndPoint.Name = "lines_EndPoint";
             this.lines_EndPoint.Size = new System.Drawing.Size(75, 21);
             this.lines_EndPoint.TabIndex = 1;
@@ -249,7 +248,7 @@
             // 
             this.line_startPoint.AutoSize = true;
             this.line_startPoint.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.line_startPoint.Location = new System.Drawing.Point(28, 13);
+            this.line_startPoint.Location = new System.Drawing.Point(13, 12);
             this.line_startPoint.Name = "line_startPoint";
             this.line_startPoint.Size = new System.Drawing.Size(81, 21);
             this.line_startPoint.TabIndex = 0;
@@ -271,23 +270,24 @@
             this.rectangles.Location = new System.Drawing.Point(4, 24);
             this.rectangles.Name = "rectangles";
             this.rectangles.Padding = new System.Windows.Forms.Padding(3);
-            this.rectangles.Size = new System.Drawing.Size(682, 95);
+            this.rectangles.Size = new System.Drawing.Size(682, 73);
             this.rectangles.TabIndex = 1;
             this.rectangles.Text = "Rectangles";
             this.rectangles.UseVisualStyleBackColor = true;
             // 
             // rectangleDraw
             // 
-            this.rectangleDraw.Location = new System.Drawing.Point(601, 66);
+            this.rectangleDraw.Location = new System.Drawing.Point(604, 29);
             this.rectangleDraw.Name = "rectangleDraw";
             this.rectangleDraw.Size = new System.Drawing.Size(75, 23);
             this.rectangleDraw.TabIndex = 9;
             this.rectangleDraw.Text = "Draw";
             this.rectangleDraw.UseVisualStyleBackColor = true;
+            this.rectangleDraw.Click += new System.EventHandler(this.rectangleDraw_Click);
             // 
             // rectanglesHeight
             // 
-            this.rectanglesHeight.Location = new System.Drawing.Point(525, 29);
+            this.rectanglesHeight.Location = new System.Drawing.Point(498, 29);
             this.rectanglesHeight.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -306,7 +306,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(472, 32);
+            this.label10.Location = new System.Drawing.Point(445, 32);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 19);
             this.label10.TabIndex = 9;
@@ -314,7 +314,7 @@
             // 
             // rectanglesWidth
             // 
-            this.rectanglesWidth.Location = new System.Drawing.Point(370, 29);
+            this.rectanglesWidth.Location = new System.Drawing.Point(343, 29);
             this.rectanglesWidth.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -333,7 +333,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(321, 32);
+            this.label9.Location = new System.Drawing.Point(294, 32);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(46, 19);
             this.label9.TabIndex = 2;
@@ -397,7 +397,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(321, 6);
+            this.label6.Location = new System.Drawing.Point(294, 6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 21);
             this.label6.TabIndex = 3;
@@ -427,19 +427,20 @@
             this.ellipses.Location = new System.Drawing.Point(4, 24);
             this.ellipses.Name = "ellipses";
             this.ellipses.Padding = new System.Windows.Forms.Padding(3);
-            this.ellipses.Size = new System.Drawing.Size(682, 95);
+            this.ellipses.Size = new System.Drawing.Size(682, 73);
             this.ellipses.TabIndex = 2;
             this.ellipses.Text = "Ellipses";
             this.ellipses.UseVisualStyleBackColor = true;
             // 
             // ellipsesDrawButton
             // 
-            this.ellipsesDrawButton.Location = new System.Drawing.Point(601, 66);
+            this.ellipsesDrawButton.Location = new System.Drawing.Point(604, 29);
             this.ellipsesDrawButton.Name = "ellipsesDrawButton";
             this.ellipsesDrawButton.Size = new System.Drawing.Size(75, 23);
             this.ellipsesDrawButton.TabIndex = 10;
             this.ellipsesDrawButton.Text = "Draw";
             this.ellipsesDrawButton.UseVisualStyleBackColor = true;
+            this.ellipsesDrawButton.Click += new System.EventHandler(this.ellipsesDrawButton_Click);
             // 
             // ellipsesRadius
             // 
@@ -544,37 +545,42 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(601, 7);
+            this.clearButton.Location = new System.Drawing.Point(620, 119);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(75, 23);
             this.clearButton.TabIndex = 2;
             this.clearButton.Text = "Clear";
             this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(601, 37);
+            this.changeButton.Location = new System.Drawing.Point(539, 119);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(75, 23);
             this.changeButton.TabIndex = 3;
             this.changeButton.Text = "Change";
             this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // myPictureBox
             // 
             this.myPictureBox.BackColor = System.Drawing.Color.White;
             this.myPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.myPictureBox.Location = new System.Drawing.Point(12, 141);
+            this.myPictureBox.Location = new System.Drawing.Point(12, 148);
             this.myPictureBox.Name = "myPictureBox";
-            this.myPictureBox.Size = new System.Drawing.Size(690, 476);
+            this.myPictureBox.Size = new System.Drawing.Size(690, 469);
             this.myPictureBox.TabIndex = 2;
             this.myPictureBox.TabStop = false;
+            this.myPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.MyPictureBox_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(710, 627);
+            this.Controls.Add(this.changeButton);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.myPictureBox);
             this.Controls.Add(this.shapesControl);
             this.Name = "Form1";

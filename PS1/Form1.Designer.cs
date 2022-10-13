@@ -573,6 +573,8 @@
             this.myPictureBox.TabIndex = 2;
             this.myPictureBox.TabStop = false;
             this.myPictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.MyPictureBox_Paint);
+            this.myPictureBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MyPictureBox_MouseDown);
+            this.myPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MyPictureBox_MouseMove);
             // 
             // Form1
             // 
